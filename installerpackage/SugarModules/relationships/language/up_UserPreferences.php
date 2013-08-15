@@ -1,0 +1,4 @@
+<?php
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_UP_USERPREFERENCES_USERS_FROM_USERS_TITLE'] = 'One Time User Preferences';
+$mod_strings['LBL_UP_USERPREFERENCES_USERS_1_FROM_USERS_TITLE'] = 'Forced User Preferences';
