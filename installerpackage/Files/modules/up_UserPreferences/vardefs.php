@@ -178,10 +178,11 @@ $dictionary['up_UserPreferences'] = array(
     'calculated' => false,
     'len' => 100,
     'size' => '20',
-    'options' => 'dom_cal_day_long',
+    'options' => 'first_day_of_the_week_list',
     'studio' => 'visible',
     'dependency' => 'equal($first_day_of_the_week_enable,true)',
     'default' => '0',
+    'function' => 'up_getFirstDayOfWeek',
   ),
   'first_day_of_the_week_enable' => 
   array (

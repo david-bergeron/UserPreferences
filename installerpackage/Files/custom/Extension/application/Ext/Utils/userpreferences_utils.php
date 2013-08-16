@@ -28,3 +28,15 @@ function up_getCurrencies($focus, $field, $value, $view) {
     $currencySelect = str_replace('currency_select', 'currency', $currencySelect);
     return $currencySelect;
 }
+
+function up_getFirstDayOfWeek() {
+    global $app_list_strings;
+    
+    $fdowDays = array();
+    foreach ($app_list_strings['dom_cal_day_long'] as $d) {
+        if ($d != "") {
+            $fdowDays[] = $d;
+        }
+    }
+    return $fdowDays;
+}
