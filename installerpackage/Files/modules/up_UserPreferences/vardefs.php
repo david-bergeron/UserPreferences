@@ -437,7 +437,7 @@ $dictionary['up_UserPreferences'] = array(
   array (
     'required' => false,
     'name' => 'layout_options',
-    'vname' => 'LBL_LAYOUT_OPTIONS',
+    'vname' => 'Hide Modules',
     'type' => 'varchar',
     'massupdate' => 0,
     'no_default' => false,

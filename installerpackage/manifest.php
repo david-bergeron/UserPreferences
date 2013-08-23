@@ -989,5 +989,14 @@ $installdefs = array (
     'class' => 'up_UserPreferences',
     'function' => 'applyUserPreferences',
    ),
+  array(
+    'module' => 'Users',
+    'hook' => 'after_relationship_add',
+    'order' => 99,
+    'description' => 'Force User Preferences Relationship Policy',
+    'file' => 'modules/up_UserPreferences/up_UserPreferences.php',
+    'class' => 'up_UserPreferences',
+    'function' => 'forectRelationshipPolicy',
+   ),
   ),
 );

@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 function up_getDateFormats() {
     global $sugar_config;
     return $sugar_config['date_formats'];
@@ -31,7 +30,7 @@ function up_getCurrencies($focus, $field, $value, $view) {
 
 function up_getFirstDayOfWeek() {
     global $app_list_strings;
-    
+
     $fdowDays = array();
     foreach ($app_list_strings['dom_cal_day_long'] as $d) {
         if ($d != "") {

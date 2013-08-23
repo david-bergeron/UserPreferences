@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 $admin_options_defs=array();
 $admin_options_defs['Administration']['Section_Key']=array(
         'Administration',

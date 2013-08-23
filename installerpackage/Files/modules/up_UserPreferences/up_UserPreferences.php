@@ -24,7 +24,7 @@ class up_UserPreferences extends up_UserPreferences_sugar {
 	}
 	
 	public function applyUserPreferences($userObj) {
-	    $GLOBALS['log']->fatal("In applyUserPreferences for ".$userObj->name);
+	    $GLOBALS['log']->debug("In applyUserPreferences for ".$userObj->name);
 	    
 	    if (empty($userObj))
 	    {
@@ -34,16 +34,92 @@ class up_UserPreferences extends up_UserPreferences_sugar {
 	    
 	    $userPrefs = $this->getUserPreferences($userObj);
 
-	    $GLOBALS['log']->fatal("New User Preferences");
+	    $GLOBALS['log']->debug("New User Preferences");
 	    // if there are user preference to 
 	    if (count($userPrefs) != 0) {
 	        foreach ($userPrefs as $key => $value) {
-	            $GLOBALS['log']->fatal("key = ".$key.", value = ".$value);
+	            $GLOBALS['log']->debug("key = ".$key.", value = ".$value);
 	            if ($key == 'hide_tabs') {
 	                $value = explode(',', $value);
-	                $GLOBALS['log']->fatal($value);
+	                $GLOBALS['log']->debug($value);
 	            }
 	            $userObj->setPreference($key, $value);
+	        }
+	    }
+	}
+	
+	public function forceRelationshipPolicy(&$userObj, $event, $arguments) {
+	    $relationship = $arguments['relationship'];
+	    $GLOBALS['log']->fatal('############################');
+	    $GLOBALS['log']->fatal('In forceRelationshipPolicy for '.$arguments['relationship']);
+	    $GLOBALS['log']->fatal('one time 1 '.$userObj->up_userpreferences_usersup_userpreferences_ida);
+	    $GLOBALS['log']->fatal('forced 1 '.$userObj->up_userpreferences_users_1up_userpreferences_ida);
+// 	    $GLOBALS['log']->fatal(print_r($userObj,true));
+	    if (empty($userObj))
+	    {
+	        global $current_user;
+	        $userObj = $current_user;
+	    }
+	     
+	    //make sure user can only show under 1 subpanel under a Dashboard Template record
+	    $relationships = array(
+	        "up_userpreferences_users" => "up_userpreferences_users",
+	        "up_userpreferences_users_1" => "up_userpreferences_users_1",
+	    );
+	     
+	    if (!isset($relationships[$relationship]))
+	    {
+	        $GLOBALS['log']->fatal("relationship ".$relationship." not in array");
+	        return;
+	    }
+	     
+	    // one time user preferences
+	    if ($relationship == "up_userpreferences_users")
+	    {
+	        $GLOBALS['log']->fatal('one time user preferences '.$userObj->name);
+	        $GLOBALS['log']->fatal('one time 2 '.$userObj->up_userpreferences_usersup_userpreferences_ida);
+	        
+	        // if the user is in the one time user preferences, delete it
+	        if (!empty($userObj->up_userpreferences_usersup_userpreferences_ida))
+	        {
+	            $otherTemplate = BeanFactory::getBean("up_UserPreferences", $userObj->up_userpreferences_usersup_userpreferences_ida);
+	            $otherTemplate->load_relationship("up_userpreferences_user");
+	            $otherTemplate->up_userpreferences_users->delete($otherTemplate->id, $userObj->id);
+	        }
+	        $GLOBALS['log']->fatal('forced 2 '.$userObj->up_userpreferences_users_1up_userpreferences_ida);
+	        // if the user is in the forced user preferences, delete it
+	        if (!empty($userObj->up_userpreferences_users_1up_userpreferences_ida))
+	        {
+	            $otherTemplate = BeanFactory::getBean("up_UserPreferences", $userObj->up_userpreferences_users_1up_userpreferences_ida);
+	            $otherTemplate->load_relationship("up_userpreferences_users_1");
+	            $GLOBALS['log']->fatal("template id = ".$otherTemplate->id.", user id =".$userObj->id);
+	            $otherTemplate->up_userpreferences_users_1->delete($otherTemplate->id, $userObj->id);
+	        }
+	    }
+	     
+	    // forced user preferences
+	    if ($relationship == "up_userpreferences_users_1")
+	    {
+	        $GLOBALS['log']->fatal('forced user preferences for '.$userObj->name);
+	        $GLOBALS['log']->fatal('forced 3 '.$userObj->up_userpreferences_users_1up_userpreferences_ida);
+	        
+	        // if the user is in the forced user preferences, delete it
+	        if (!empty($userObj->up_userpreferences_users_1up_userpreferences_ida))
+	        {
+	            $otherTemplate = BeanFactory::getBean("up_UserPreferences", $userObj->up_userpreferences_users_1up_userpreferences_ida);
+	            $otherTemplate->load_relationship("up_userpreferences_users_1");
+	            $otherTemplate->up_userpreferences_users_1->delete($otherTemplate->id, $userObj->id);
+	        }
+	        $GLOBALS['log']->fatal('one time 3 '.$userObj->up_userpreferences_usersup_userpreferences_ida);
+	        
+	        // if the user is in the one time user preferences, delete it
+	        if (!empty($userObj->up_userpreferences_usersup_userpreferences_ida))
+	        {
+	            
+	            $otherTemplate = BeanFactory::getBean("up_UserPreferences", $userObj->up_userpreferences_usersup_userpreferences_ida);
+	            $otherTemplate->load_relationship("up_userpreferences_user");
+	            $GLOBALS['log']->fatal("template id = ".$otherTemplate->id.", user id =".$userObj->id);
+	            $otherTemplate->up_userpreferences_users->delete($otherTemplate->id, $userObj->id);
 	        }
 	    }
 	}

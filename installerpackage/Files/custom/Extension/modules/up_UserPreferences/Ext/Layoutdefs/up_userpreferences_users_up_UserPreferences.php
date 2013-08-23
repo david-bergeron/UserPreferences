@@ -1,5 +1,5 @@
 <?php
- // created: 2013-08-14 08:16:46
+ // created: 2013-08-20 11:54:06
 $layout_defs["up_UserPreferences"]["subpanel_setup"]['up_userpreferences_users'] = array (
   'order' => 100,
   'module' => 'Users',
