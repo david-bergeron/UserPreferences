@@ -35,9 +35,9 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'UserPreferences',
-  'published_date' => '2013-08-15 14:48:58',
+  'published_date' => '2013-08-23 14:16:32',
   'type' => 'module',
-  'version' => '1.0',
+  'version' => 1377267392,
   'remove_tables' => 'prompt',
 );
 
@@ -79,124 +79,34 @@ $installdefs = array (
     ),
   ),
   'image_dir' => '<basepath>/icons',
-  'copy' => array(
-       0 => array(
-           'from' => '<basepath>/Files/custom/Extension/application/Ext/Utils/userpreferences_utils.php',
-           'to' => 'custom/Extension/application/Ext/Utils/userpreferences_utils.php',
-       ),
-       1 => array(
-           'from' => '<basepath>/Files/custom/Extension/modules/Administration/Ext/Administration/UserPreferences.php',
-           'to' => 'custom/Extension/modules/Administration/Ext/Administration/UserPreferences.php',
-       ),
-       2 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/Classes/Layouts.php',
-           'to' => 'modules/up_UserPreferences/Classes/Layouts.php',
-       ),
-       3 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/Dashlets/up_UserPreferencesDashlet/up_UserPreferencesDashlet.meta.php',
-           'to' => 'modules/up_UserPreferences/Dashlets/up_UserPreferencesDashlet/up_UserPreferencesDashlet.meta.php',
-       ),
-       4 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/Dashlets/up_UserPreferencesDashlet/up_UserPreferencesDashlet.php',
-           'to' => 'modules/up_UserPreferences/Dashlets/up_UserPreferencesDashlet/up_UserPreferencesDashlet.php',
-       ),
-       5 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/clients/mobile/layouts/detail/detail.php',
-           'to' => 'modules/up_UserPreferences/clients/mobile/layouts/detail/detail.php',
-       ),
-       6 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/clients/mobile/layouts/edit/edit.php',
-           'to' => 'modules/up_UserPreferences/clients/mobile/layouts/edit/edit.php',
-       ),
-       7 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/clients/mobile/layouts/list/list.php',
-           'to' => 'modules/up_UserPreferences/clients/mobile/layouts/list/list.php',
-       ),
-       8 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/clients/mobile/views/detail/detail.php',
-           'to' => 'modules/up_UserPreferences/clients/mobile/views/detail/detail.php',
-       ),
-       9 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/clients/mobile/views/edit/edit.php',
-           'to' => 'modules/up_UserPreferences/clients/mobile/views/edit/edit.php',
-       ),
-       10 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/clients/mobile/views/list/list.php',
-           'to' => 'modules/up_UserPreferences/clients/mobile/views/list/list.php',
-       ),
-       11 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/clients/mobile/views/search/search.php',
-           'to' => 'modules/up_UserPreferences/clients/mobile/views/search/search.php',
-       ),
-       12 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/css/dragdrop.css',
-           'to' => 'modules/up_UserPreferences/css/dragdrop.css',
-       ),
-       13 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/js/dragdrop.js',
-           'to' => 'modules/up_UserPreferences/js/dragdrop.js',
-       ),
-       14 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/language/en_us.lang.php',
-           'to' => 'modules/up_UserPreferences/language/en_us.lang.php',
-       ),
-       15 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/metadata/subpanels/default.php',
-           'to' => 'modules/up_UserPreferences/metadata/subpanels/default.php',
-       ),
-       16 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/metadata/SearchFields.php',
-           'to' => 'modules/up_UserPreferences/metadata/SearchFields.php',
-       ),
-       17 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/metadata/dashletviewdefs.php',
-           'to' => 'modules/up_UserPreferences/metadata/dashletviewdefs.php',
-       ),
-       18 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/metadata/detailviewdefs.php',
-           'to' => 'modules/up_UserPreferences/metadata/detailviewdefs.php',
-       ),
-       19 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/metadata/editviewdefs.php',
-           'to' => 'modules/up_UserPreferences/metadata/editviewdefs.php',
-       ),
-       20 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/metadata/listviewdefs.php',
-           'to' => 'modules/up_UserPreferences/metadata/listviewdefs.php',
-       ),
-       21 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/metadata/metafiles.php',
-           'to' => 'modules/up_UserPreferences/metadata/metafiles.php',
-       ),
-       22 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/metadata/popupdefs.php',
-           'to' => 'modules/up_UserPreferences/metadata/popupdefs.php',
-       ),
-       23 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/metadata/quickcreatedefs.php',
-           'to' => 'modules/up_UserPreferences/metadata/quickcreatedefs.php',
-       ),
-       24 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/metadata/searchdefs.php',
-           'to' => 'modules/up_UserPreferences/metadata/searchdefs.php',
-       ),
-       25 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/metadata/studio.php',
-           'to' => 'modules/up_UserPreferences/metadata/studio.php',
-       ),
-       26 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/up_UserPreferences.php',
-           'to' => 'modules/up_UserPreferences/up_UserPreferences.php',
-       ),
-       27 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/up_UserPreferences_sugar.php',
-           'to' => 'modules/up_UserPreferences/up_UserPreferences_sugar.php',
-       ),
-       28 => array(
-           'from' => '<basepath>/Files/modules/up_UserPreferences/vardefs.php',
-           'to' => 'modules/up_UserPreferences/vardefs.php',
-       ),
-   ),
+  'copy' => 
+  array (
+    0 => 
+    array (
+      'from' => '<basepath>/SugarModules/modules/up_UserPreferences',
+      'to' => 'modules/up_UserPreferences',
+    ),
+    1 => array(
+      'from' => '<basepath>/Files/custom/Extension/application/Ext/Utils/userpreferences_utils.php',
+      'to' => 'custom/Extension/application/Ext/Utils/userpreferences_utils.php',
+    ),
+    2 => array(
+      'from' => '<basepath>/Files/custom/Extension/modules/Administration/Ext/Administration/UserPreferences.php',
+      'to' => 'custom/Extension/modules/Administration/Ext/Administration/UserPreferences.php',
+    ),
+    3 => array(
+      'from' => '<basepath>/Files/custom/Extension/modules/up_UserPreferences/Ext/Layoutdefs/up_userpreferences_users_1_up_UserPreferences.php',
+      'to' => 'custom/Extension/modules/up_UserPreferences/Ext/Layoutdefs/up_userpreferences_users_1_up_UserPreferences.php',
+    ),
+    4 => array(
+      'from' => '<basepath>/Files/custom/Extension/modules/up_UserPreferences/Ext/Layoutdefs/up_userpreferences_users_up_UserPreferences.php',
+      'to' => 'custom/Extension/modules/up_UserPreferences/Ext/Layoutdefs/up_userpreferences_users_up_UserPreferences.php',
+    ),
+    5 => array(
+      'from' => '<basepath>/Files/custom/Extension/modules/up_UserPreferences/Ext/Language/en_us.UserPreferences.php',
+      'to' => 'custom/Extension/modules/up_UserPreferences/Ext/Language/en_us.UserPreferences.php',
+    ),
+  ),
   'language' => 
   array (
     0 => 
@@ -978,25 +888,5 @@ $installdefs = array (
       'from' => '<basepath>/SugarModules/relationships/wirelesslayoutdefs/up_userpreferences_users_1_up_UserPreferences.php',
       'to_module' => 'up_UserPreferences',
     ),
-  ),
-  'logic_hooks' => array(
-  array(
-    'module' => 'Users',
-    'hook' => 'after_login',
-    'order' => 99,
-    'description' => 'User Preferences Mass Update',
-    'file' => 'modules/up_UserPreferences/up_UserPreferences.php',
-    'class' => 'up_UserPreferences',
-    'function' => 'applyUserPreferences',
-   ),
-  array(
-    'module' => 'Users',
-    'hook' => 'after_relationship_add',
-    'order' => 99,
-    'description' => 'Force User Preferences Relationship Policy',
-    'file' => 'modules/up_UserPreferences/up_UserPreferences.php',
-    'class' => 'up_UserPreferences',
-    'function' => 'forectRelationshipPolicy',
-   ),
   ),
 );
