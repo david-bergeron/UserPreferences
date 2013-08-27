@@ -87,26 +87,54 @@ $installdefs = array (
       'to' => 'modules/up_UserPreferences',
     ),
     1 => array(
-      'from' => '<basepath>/Files/custom/Extension/application/Ext/Utils/userpreferences_utils.php',
-      'to' => 'custom/Extension/application/Ext/Utils/userpreferences_utils.php',
-    ),
+        'from' => '<basepath>/Files/custom/Extension/application/Ext/Utils/userpreferences_utils.php',
+        'to' => 'custom/Extension/application/Ext/Utils/userpreferences_utils.php',
+        ),
     2 => array(
-      'from' => '<basepath>/Files/custom/Extension/modules/Administration/Ext/Administration/UserPreferences.php',
-      'to' => 'custom/Extension/modules/Administration/Ext/Administration/UserPreferences.php',
-    ),
+        'from' => '<basepath>/Files/custom/Extension/modules/Administration/Ext/Administration/UserPreferences.php',
+        'to' => 'custom/Extension/modules/Administration/Ext/Administration/UserPreferences.php',
+        ),
     3 => array(
-      'from' => '<basepath>/Files/custom/Extension/modules/up_UserPreferences/Ext/Layoutdefs/up_userpreferences_users_1_up_UserPreferences.php',
-      'to' => 'custom/Extension/modules/up_UserPreferences/Ext/Layoutdefs/up_userpreferences_users_1_up_UserPreferences.php',
-    ),
+        'from' => '<basepath>/Files/custom/Extension/modules/up_UserPreferences/Ext/Language/en_us.UserPreferences.php',
+        'to' => 'custom/Extension/modules/up_UserPreferences/Ext/Language/en_us.UserPreferences.php',
+        ),
     4 => array(
-      'from' => '<basepath>/Files/custom/Extension/modules/up_UserPreferences/Ext/Layoutdefs/up_userpreferences_users_up_UserPreferences.php',
-      'to' => 'custom/Extension/modules/up_UserPreferences/Ext/Layoutdefs/up_userpreferences_users_up_UserPreferences.php',
-    ),
+        'from' => '<basepath>/Files/custom/Extension/modules/up_UserPreferences/Ext/Layoutdefs/up_userpreferences_users_1_up_UserPreferences.php',
+        'to' => 'custom/Extension/modules/up_UserPreferences/Ext/Layoutdefs/up_userpreferences_users_1_up_UserPreferences.php',
+        ),
     5 => array(
-      'from' => '<basepath>/Files/custom/Extension/modules/up_UserPreferences/Ext/Language/en_us.UserPreferences.php',
-      'to' => 'custom/Extension/modules/up_UserPreferences/Ext/Language/en_us.UserPreferences.php',
+        'from' => '<basepath>/Files/custom/Extension/modules/up_UserPreferences/Ext/Layoutdefs/up_userpreferences_users_up_UserPreferences.php',
+        'to' => 'custom/Extension/modules/up_UserPreferences/Ext/Layoutdefs/up_userpreferences_users_up_UserPreferences.php',
+        ),
+    6 => array(
+        'from' => '<basepath>/Files/modules/up_UserPreferences/Classes/Layouts.php',
+        'to' => 'modules/up_UserPreferences/Classes/Layouts.php',
+        ),
+    7 => array(
+        'from' => '<basepath>/Files/modules/up_UserPreferences/Dashlets/up_UserPreferencesDashlet/up_UserPreferencesDashlet.meta.php',
+        'to' => 'modules/up_UserPreferences/Dashlets/up_UserPreferencesDashlet/up_UserPreferencesDashlet.meta.php',
+        ),
+    8 => array(
+        'from' => '<basepath>/Files/modules/up_UserPreferences/Dashlets/up_UserPreferencesDashlet/up_UserPreferencesDashlet.php',
+        'to' => 'modules/up_UserPreferences/Dashlets/up_UserPreferencesDashlet/up_UserPreferencesDashlet.php',
+        ),
+    9 => array(
+        'from' => '<basepath>/Files/modules/up_UserPreferences/css/dragdrop.css',
+        'to' => 'modules/up_UserPreferences/css/dragdrop.css',
+        ),
+    10 => array(
+        'from' => '<basepath>/Files/modules/up_UserPreferences/js/dragdrop.js',
+        'to' => 'modules/up_UserPreferences/js/dragdrop.js',
+        ),
+    11 => array(
+        'from' => '<basepath>/Files/modules/up_UserPreferences/vardefs.php',
+        'to' => 'modules/up_UserPreferences/vardefs.php',
+        ),
+    12 => array(
+        'from' => '<basepath>/Files/modules/up_UserPreferences/up_UserPreferences.php',
+        'to' => 'modules/up_UserPreferences/up_UserPreferences.php',
+        ),
     ),
-  ),
   'language' => 
   array (
     0 => 
