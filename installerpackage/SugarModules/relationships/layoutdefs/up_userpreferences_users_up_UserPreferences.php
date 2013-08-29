@@ -12,10 +12,6 @@ $layout_defs["up_UserPreferences"]["subpanel_setup"]['up_userpreferences_users']
   array (
     0 => 
     array (
-      'widget_class' => 'SubPanelTopButtonQuickCreate',
-    ),
-    1 => 
-    array (
       'widget_class' => 'SubPanelTopSelectButton',
       'mode' => 'MultiSelect',
     ),
